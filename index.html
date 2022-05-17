@@ -99,14 +99,14 @@
               waypoints: true,
           
               // Toggle custom waypoint icons: true || { associative array of <sym> tags } || false
-              wptIcons: {
+              /*wptIcons: {
                 '': L.divIcon({
                   className: 'elevation-waypoint-marker',
                   html: '<i class="elevation-waypoint-icon"></i>',
                   iconSize: [30, 30],
                   iconAnchor: [8, 30],
                 }),
-              },
+              },*/
           
               // Toggle waypoint labels: true || "markers" || "dots" || false
               wptLabels: true,
@@ -117,13 +117,13 @@
             };
           
             // Instantiate map (leaflet-ui).
-            var map = L.map('map', { mapTypeId: 'terrain', center: [41.4583, 12.7059], zoom: 5 });
+            var map = L.map('map', { mapTypeId: 'terrain', center: [47.4406, 11.2598], zoom:13 });
           
             // Instantiate elevation control.
             var controlElevation = L.control.elevation(elevation_options).addTo(map);
           
             // Load track from url (allowed data types: "*.geojson", "*.gpx", "*.tcx")
-            controlElevation.load("https://raruto.github.io/leaflet-elevation/examples/via-emilia.gpx");
+            controlElevation.load("Easy_Kranzberg_z.geojson");
           
           </script>
         
